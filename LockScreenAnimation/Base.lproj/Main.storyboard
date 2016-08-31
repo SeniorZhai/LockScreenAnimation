@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LockScreenAnimation" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="topLock" translatesAutoresizingMaskIntoConstraints="NO" id="VHq-LR-mwo" userLabel="topLock">
+                                <rect key="frame" x="0.0" y="20" width="600" height="290"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bottomLock" translatesAutoresizingMaskIntoConstraints="NO" id="wXe-vb-stb">
+                                <rect key="frame" x="0.0" y="310" width="600" height="290"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lockBorder" translatesAutoresizingMaskIntoConstraints="NO" id="0Rp-ai-oKH">
+                                <rect key="frame" x="240" y="240" width="120" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="0Rp-ai-oKH" secondAttribute="height" id="g1P-Fk-hsT"/>
+                                    <constraint firstAttribute="width" constant="120" id="uab-W1-rey"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lockKeyhole" translatesAutoresizingMaskIntoConstraints="NO" id="ujn-y3-ocl">
+                                <rect key="frame" x="272" y="272" width="56" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ujn-y3-ocl" secondAttribute="height" id="AaX-Do-z1I"/>
+                                    <constraint firstAttribute="width" constant="56" id="SuD-eB-EDa"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ujn-y3-ocl" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="A9f-5f-cKC"/>
+                            <constraint firstItem="VHq-LR-mwo" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="BLC-vw-JV3"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="wXe-vb-stb" secondAttribute="bottom" id="Exr-bp-GKU"/>
+                            <constraint firstItem="VHq-LR-mwo" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="FGl-2Y-dln"/>
+                            <constraint firstItem="wXe-vb-stb" firstAttribute="top" secondItem="VHq-LR-mwo" secondAttribute="bottom" id="L4b-5m-URb"/>
+                            <constraint firstItem="ujn-y3-ocl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Y3e-x1-yA6"/>
+                            <constraint firstItem="wXe-vb-stb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="csZ-20-C95"/>
+                            <constraint firstItem="0Rp-ai-oKH" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="e4I-U5-5ER"/>
+                            <constraint firstItem="wXe-vb-stb" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="oCL-Rw-1q0"/>
+                            <constraint firstItem="VHq-LR-mwo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="y3r-ZB-0dh"/>
+                            <constraint firstItem="wXe-vb-stb" firstAttribute="height" secondItem="VHq-LR-mwo" secondAttribute="height" id="yof-bt-eCo"/>
+                            <constraint firstItem="0Rp-ai-oKH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="z3L-JO-txz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bottomLock" destination="wXe-vb-stb" id="BMd-B9-ZHY"/>
+                        <outlet property="lockBorder" destination="0Rp-ai-oKH" id="JGo-pB-e2e"/>
+                        <outlet property="lockKeyholde" destination="ujn-y3-ocl" id="lIv-cU-Tlr"/>
+                        <outlet property="topLock" destination="VHq-LR-mwo" id="w4M-Dk-3cs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bottomLock" width="4184" height="2118"/>
+        <image name="lockBorder" width="802" height="800"/>
+        <image name="lockKeyhole" width="496" height="496"/>
+        <image name="topLock" width="4184" height="2118"/>
+    </resources>
+</document>
